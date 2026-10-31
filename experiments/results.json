@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-31T20:51:51+00:00",
+  "target": "http://127.0.0.1:30531/",
+  "controlled_lab": true,
+  "environment": {
+    "python": "3.11.4",
+    "platform": "Windows-10-10.0.29698-SP0",
+    "curl_cffi": "0.15.0",
+    "playwright": "1.60.0"
+  },
+  "browser_acquisition_s": 2.06,
+  "session": {
+    "solved": true,
+    "title": "Protected content",
+    "final_url": "http://127.0.0.1:30531/",
+    "cookie_count": 1,
+    "clearance_cookie_count": 1,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.96 Safari/537.36"
+  },
+  "expected_matched": 5,
+  "expected_total": 5,
+  "cases": [
+    {
+      "case": "valid",
+      "expected_outcome": "ok",
+      "status": 200,
+      "outcome": "ok",
+      "reason": "http 200",
+      "lab_reason": "ok",
+      "elapsed_ms": 2.83,
+      "content_length": 227
+    },
+    {
+      "case": "no_cookie",
+      "expected_outcome": "challenge",
+      "status": 403,
+      "outcome": "challenge",
+      "reason": "challenge marker: 'just a moment'",
+      "lab_reason": "missing",
+      "elapsed_ms": 1.53,
+      "content_length": 495
+    },
+    {
+      "case": "wrong_ua",
+      "expected_outcome": "challenge",
+      "status": 403,
+      "outcome": "challenge",
+      "reason": "challenge marker: 'just a moment'",
+      "lab_reason": "bad-signature",
+      "elapsed_ms": 1.58,
+      "content_length": 495
+    },
+    {
+      "case": "tampered",
+      "expected_outcome": "challenge",
+      "status": 403,
+      "outcome": "challenge",
+      "reason": "challenge marker: 'just a moment'",
+      "lab_reason": "bad-signature",
+      "elapsed_ms": 1.59,
+      "content_length": 495
+    },
+    {
+      "case": "expired",
+      "expected_outcome": "challenge",
+      "status": 403,
+      "outcome": "challenge",
+      "reason": "challenge marker: 'just a moment'",
+      "lab_reason": "expired",
+      "elapsed_ms": 1.87,
+      "content_length": 495
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # The unit tests exercise the lab, session model, classifier, and replay
+      # client. They do not launch a browser, so Playwright is not installed.
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install curl_cffi
+      - run: python -m unittest discover -s tests -v

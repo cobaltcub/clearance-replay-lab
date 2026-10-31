@@ -1,4 +1,22 @@
+# Python
 __pycache__/
+*.py[cod]
+.venv/
+venv/
 env/
-*.html
-*.json
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Session material can contain live cookies. Keep it local.
+sessions/
+session_store.json
+scraped_data.html
+*.log
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
