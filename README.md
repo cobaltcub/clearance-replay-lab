@@ -1,8 +1,8 @@
 # Clearance-cookie replay lab
 
-> The repository is still named `Anti-Bot-Bypass-Engine-` for continuity. It is
-> no longer a bypass engine; it is a controlled lab for one question: can a
-> browser-issued clearance cookie be replayed by a non-browser HTTP client?
+> This started as `Anti-Bot-Bypass-Engine-`. It is no longer a bypass engine;
+> it is a controlled lab for one question: can a browser-issued clearance
+> cookie be replayed by a non-browser HTTP client?
 
 I started with a "Cloudflare bypass" scraper. This is what it became after I
 tried to make the claims testable.
